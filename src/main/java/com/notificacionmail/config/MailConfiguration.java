@@ -1,5 +1,6 @@
 package com.notificacionmail.config;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -9,6 +10,9 @@ import java.util.Properties;
 
 @Configuration
 public class MailConfiguration {
+
+    @Value("${email.sender}")
+    private String emailUser;
     @Bean
     public JavaMailSender getJavaMailSender(){
 
@@ -16,7 +20,7 @@ public class MailConfiguration {
 
         mailSender.setHost("smtp.gmail.com");
         mailSender.setPort(587);
-        mailSender.setUsername("sistemas.salud@umag.cl");
+        mailSender.setUsername(emailUser);
         mailSender.setPassword("<Password>");
 
         Properties props = mailSender.getJavaMailProperties();
