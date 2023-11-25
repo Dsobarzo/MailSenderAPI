@@ -1,5 +1,6 @@
 package com.notificacionmail.config;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
@@ -8,7 +9,7 @@ import java.util.Properties;
 
 @Configuration
 public class MailConfiguration {
-
+    @Bean
     public JavaMailSender getJavaMailSender(){
 
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
