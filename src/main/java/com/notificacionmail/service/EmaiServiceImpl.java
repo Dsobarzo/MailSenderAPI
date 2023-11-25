@@ -35,7 +35,7 @@ public class EmaiServiceImpl implements  IEmailService{
     public void sendEmailWithFile(String[] toUser, String subject, String message, File file) {
 
         try {
-            MimeMessage mimeMessage = mailSender.createMimeMessage();
+            MimeMessage mimeMessage = mailSender.createMimeMessage ();
             MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage, true, StandardCharsets.UTF_8.name());
 
             mimeMessageHelper.setFrom(emailUser);
