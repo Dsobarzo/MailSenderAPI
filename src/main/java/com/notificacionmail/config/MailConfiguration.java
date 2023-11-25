@@ -16,7 +16,7 @@ public class MailConfiguration {
         mailSender.setHost("smtp.gmail.com");
         mailSender.setPort(587);
         mailSender.setUsername("sistemas.salud@umag.cl");
-        mailSender.setPassword("Hand.86.Xv");
+        mailSender.setPassword("<Password>");
 
         Properties props = mailSender.getJavaMailProperties();
         props.put("mail.transport.protocol","smtp");
