@@ -40,7 +40,7 @@ public class MailController {
         try {
             String fileName = emailFileDTO.getFile().getOriginalFilename();
 
-            Path path = Paths.get("src/mail/resources/files/" + fileName);
+            Path path = Paths.get("src/main/resources/files/" + fileName);
 
             Files.createDirectories(path.getParent());
             Files.copy(emailFileDTO.getFile().getInputStream(), path, StandardCopyOption.REPLACE_EXISTING);
