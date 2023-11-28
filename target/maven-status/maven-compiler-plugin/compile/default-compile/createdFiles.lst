@@ -1,0 +1,7 @@
+com\notificacionmail\config\MailConfiguration.class
+com\notificacionmail\domain\EmailFileDTO.class
+com\notificacionmail\domain\EmailDTO.class
+com\notificacionmail\controller\MailController.class
+com\notificacionmail\NotificacionmailApplication.class
+com\notificacionmail\service\EmaiServiceImpl.class
+com\notificacionmail\service\IEmailService.class
