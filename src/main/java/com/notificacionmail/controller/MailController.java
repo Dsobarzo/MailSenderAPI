@@ -21,7 +21,7 @@ public class MailController {
 
     @Autowired
     private IEmailService emailService;
-    @PostMapping("/sendMail")
+    @PostMapping("/notificacion")
     public ResponseEntity<?> receiveRequestEmail(@RequestBody EmailDTO emailDTO){
 
         System.out.println("Mensaje Recibido " + emailDTO);
@@ -34,7 +34,7 @@ public class MailController {
         return ResponseEntity.ok(response);
     }
 
-    @PostMapping("/sendMessageFile")
+    @PostMapping("/notificacionFile")
     public ResponseEntity<?> receiveRequestEmailWithFile(@ModelAttribute EmailFileDTO emailFileDTO){
 
         try {
