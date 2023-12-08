@@ -12,14 +12,13 @@ public class NotificacionmailApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(NotificacionmailApplication.class, args);
 	}
-
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/**").
-						allowedOrigins("*").
+						allowedOrigins("https://apilab-backend-sandbox.up.railway.app/").
 						allowedMethods("*").
 						allowedHeaders("*");
 			}
