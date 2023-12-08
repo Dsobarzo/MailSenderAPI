@@ -22,6 +22,7 @@ public class MailController {
     @Autowired
     private IEmailService emailService;
     @PostMapping("/notificacion")
+    @CrossOrigin(origins = "*")
     public ResponseEntity<?> receiveRequestEmail(@RequestBody EmailDTO emailDTO){
 
         System.out.println("Mensaje Recibido " + emailDTO);

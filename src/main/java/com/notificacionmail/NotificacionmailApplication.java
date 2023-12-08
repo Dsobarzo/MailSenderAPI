@@ -19,9 +19,9 @@ public class NotificacionmailApplication {
 		@Override
 		public void addCorsMappings(CorsRegistry registry) {
 			registry.addMapping("/**")
-					.allowedOrigins("https://apilab-backend-sandbox.up.railway.app/")  // Reemplaza con tu dominio permitido
-					.allowedMethods("GET", "POST", "PUT", "DELETE")
-					.allowedHeaders("Origin", "Content-Type", "Accept", "Authorization")
+					.allowedOrigins("/**")  // Reemplaza con tu dominio permitido
+					.allowedMethods("*")
+					.allowedHeaders("*")
 					.allowCredentials(true);
 		}
 	}
