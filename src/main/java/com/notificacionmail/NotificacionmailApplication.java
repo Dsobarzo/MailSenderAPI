@@ -13,17 +13,17 @@ public class NotificacionmailApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(NotificacionmailApplication.class, args);
 	}
-	@Configuration
-	public class CorsConfig implements WebMvcConfigurer {
+	@Bean
+	public WebMvcConfigurer corsConfigurer() {
+		return new WebMvcConfigurer() {
+			@Override
+			public void addCorsMappings(CorsRegistry registry) {
+				registry.addMapping("/**").
 
-		@Override
-		public void addCorsMappings(CorsRegistry registry) {
-			registry.addMapping("/**")
-					.allowedOrigins("/**")  // Reemplaza con tu dominio permitido
-					.allowedMethods("*")
-					.allowedHeaders("*")
-					.allowCredentials(true);
-		}
+						allowedMethods("*").
+						allowedHeaders("*");
+			}
+		};
 	}
 
 }
